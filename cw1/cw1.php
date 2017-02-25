@@ -7,10 +7,18 @@
     </head>
     <body>
         <?php
-        $a = 12;
-        $b = 34;
-        echo "a = ".$a.'<br>';
-        echo "b = ".$b.'<br>';
+        $imie = "Ala";
+        var_dump($imie);
+        $a = 20;
+        $b = 6;
+        echo "<p>{$a} + {$b} = " . ($a + $b) . '</p>';
+        echo "<p>{$a} - {$b} = " . ($a - $b) . '</p>';
+        echo "<p>{$a} * {$b} = " . ($a * $b) . '</p>';
+        if ($b != 0) {
+            echo "<p>{$a} / {$b} = " . round(($a / $b), 2) . '</p>';
+        }else{
+            echo "<p>{$a} / {$b} = BRAK WYNIKU</p>";
+        }
         ?>
     </body>
 </html>
