@@ -24,7 +24,7 @@
         }
         function TabMnozenia($row, $col){
             $html  = '<table>'."\n";
-            for($i=1;$i<=$row;$i++){                
+            for($i=1;$i<=$row;$i++){                   
                 $html .= '<tr>'."\n";
                 for($j=1;$j<=$col;$j++){
                     $pierwszy = ($i==1 || $j==1)

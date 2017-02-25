@@ -13,6 +13,7 @@ div#menu ul{
     list-style: none;
 }
 div#menu ul li a{
+    margin-top:  2px;
     text-align: right;
     display: inline-block;
     text-decoration: none;
@@ -21,6 +22,7 @@ div#menu ul li a{
     width: 350px;
     margin: 0;
     padding: 15px;
+    border: solid 2px brown;
 }
 div#menu ul li a:hover{
     color:#ffcc66;
