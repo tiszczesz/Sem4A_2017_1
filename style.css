@@ -1,1 +1,28 @@
-
+body{
+    
+}
+h1{
+    text-align: center;
+    margin: auto;
+    border-bottom: solid thin green;
+}
+div#menu{
+    float: left;    
+}
+div#menu ul{
+    list-style: none;
+}
+div#menu ul li a{
+    text-align: right;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffcc66;
+    color: brown;
+    width: 350px;
+    margin: 0;
+    padding: 15px;
+}
+div#menu ul li a:hover{
+    color:#ffcc66;
+    background-color:  brown;
+}
