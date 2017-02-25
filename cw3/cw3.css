@@ -8,3 +8,15 @@
 .wyr{
     font-weight: bold;
 }
+table{
+    border-collapse: collapse;
+}
+td{
+    padding: 5px;
+    text-align: center;
+    border: solid thin black;
+}
+td.first{
+    background-color: yellowgreen;
+    color: green;
+}
