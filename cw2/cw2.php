@@ -46,6 +46,8 @@
             if($losowa!=0){
                 $licznik++;
                 $suma += $losowa;
+                if($max<$losowa) $max = $losowa;
+                if($min>$losowa) $min = $losowa;
             }            
             echo $losowa.' ';
         }while($losowa!=0);
@@ -53,6 +55,8 @@
         if($licznik>0){
            echo "<p>Suma: {$suma}</p>\n"; 
            echo "<p>Średnia: ".round($suma/$licznik,2)."</p>\n"; 
+           echo "<p>Max: {$max}</p>\n"; 
+           echo "<p>Mni: {$min}</p>\n"; 
         }else{
             echo "<p>Zbiór pusty!!</p>\n";
         }
