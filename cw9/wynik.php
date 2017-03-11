@@ -7,6 +7,7 @@
     </head>
     <body>        
         <?php
+        
         if (isset($_POST['a']) && isset($_POST['b'])) {
            // var_dump($_POST);
             if (is_numeric($_POST['a']) && is_numeric($_POST['b'])) {
