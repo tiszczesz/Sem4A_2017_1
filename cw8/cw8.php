@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>Ćwiczenie nr 8 - Formularze wstęp</h1>
-        <form>
+        <form action="wynik.php" method="post">
             <fieldset>
                 <legend>
                     Dane osobowe
@@ -24,7 +24,7 @@
                 <div class="line">
                     <label>Płeć:</label><br>
                     <label></label>
-                    Kobieta: <input type="radio" name="plec" value="k" />
+                    Kobieta: <input type="radio" name="plec" value="k" checked="" />
                     Mężczyzna: <input type="radio" name="plec" value="m" />
                 </div>
                 <div class="line">
