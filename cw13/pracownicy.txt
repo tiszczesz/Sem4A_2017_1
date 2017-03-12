@@ -2,4 +2,4 @@ Jan;Nowak;kierowca
 Adam;Turek;sprzedawca
 Monika;Grudek;asystent
 Anna;Gawlik;kierownik
-fsfs;ccbcb;sprzedawca
+dfdf;fgfgfgf;pracownik
