@@ -8,7 +8,7 @@
     <body>
         <?php
         require_once 'dane.php';
-        $f = fopen("wynik.txt", 'a');
+        $f = fopen("wynik.txt", 'w');
         if($f){
             $dane = getAll();
             foreach ($dane as $item) {

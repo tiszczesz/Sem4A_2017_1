@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link href="cw13.css" rel="stylesheet" type="text/css"/>
+    </head>
+   
+    <body>
+        <div>
+           <form action="wynik.php" method="post">
+            <fieldset>
+                <legend>
+                    Dane osobowe
+                </legend>
+                <div class="line">
+                    <label>Imię:</label>
+                    <input type="text" name="imie" />
+                </div>
+                <div class="line">
+                    <label>Nazwisko:</label>
+                    <input type="text" name="nazwisko" />
+                </div>
+                 <div class="line">
+                    <label>Stanowisko:</label>
+                    <select name="semestr">
+                        <option value="kierowca">kierowca</option>
+                        <option value="asystent">asystent</option>
+                        <option value="sprzedawca">sprzedawca</option>
+                        <option value="pracownik">pracownik</option>
+                        <option value="kierownik">kierownik</option>
+                    </select>
+                </div>
+                
+                <div class="line">
+                    <label></label>
+                    <input type="submit" value="Zatwierdź"/>
+                </div>
+            </fieldset>
+        </form>
+        </div>
+    </body>
+</html>
