@@ -8,6 +8,7 @@
     <body>
         
         <?php
+        var_dump($_POST);
         if(isset($_POST['imie'])){
             $imie = $_POST['imie'];
             $nazwisko = $_POST['nazwisko'];
