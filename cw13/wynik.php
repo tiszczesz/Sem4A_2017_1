@@ -7,6 +7,7 @@
     </head>
     <body>
         <?php
+        require_once 'dane.php';
        // var_dump($_POST);
         if(isset($_POST['imie'])){
             $imie = $_POST['imie'];
@@ -21,6 +22,7 @@
                 fwrite($f, "{$imie};{$nazwisko};{$stanowisko}".PHP_EOL);
                 fclose($f);
                 echo "<p>Zapisano do plik</p>\n";
+                echo GetFromFileToHtmlTab('pracownicy.txt');
             }
             
         }
