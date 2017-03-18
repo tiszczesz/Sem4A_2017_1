@@ -25,7 +25,7 @@
            echo "<p>Nazwa: {$row['nazwa']} cena: {$row[2]}</p>";
         }
         
-        
+        mysql_close($db);
         ?>
         </pre>
     </body>
