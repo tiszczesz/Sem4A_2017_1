@@ -10,14 +10,16 @@ class Repository{
         $conn->query("SET NAMES utf8");
         return $conn;
     }
-    public function getAllWorkers(){
+    public function getAllWorkers($id=-1){
         $conn = $this->getConnection();
         if($conn==null){
             return [];
         }
+        $stan = $id==-1 ? "": " where p.stanowiskoid = {$id}";
         $query = "SELECT  p.id,imie, nazwisko,"
                 . "pensja, nazwa FROM pracownicy as p "
                 . "INNER JOIN stanowiska as s on p.stanowiskoid=s.id "
+                . " {$stan} "
                 . "order by nazwisko";
         $result = $conn->query($query);
         $workers = [];
@@ -29,5 +31,30 @@ class Repository{
         }
         $conn->close();
         return $workers;
+    }
+    public function getStanowiska(){
+        $conn = $this->getConnection();
+        if($conn==null){
+            return [];
+        }
+        $sql = "SELECT * FROM stanowiska";
+        $result = $conn->query($sql);
+        $stanowiska = [];
+        if($result){
+            while (($row = $result->fetch_assoc())!=false){
+                $stanowiska[$row['id']]=$row['nazwa'];
+            }
+        }
+        $conn->close();
+        return $stanowiska;
+    }
+    public function AddWorker(Pracownik $w){
+        $conn = $this->getConnection();
+        if($conn==null) return false;
+        $sql = "INSERT INTO pracownicy(imie,nazwisko,pensja, stanowiskoid) "
+                . " VALUES('{$w->getImie()}','{$w->getNazwisko()}',"
+                . "{$w->getPensja()},{$w->getStanowisko()})";
+        $result = $conn->query($sql);
+        return $result;
     }
 }

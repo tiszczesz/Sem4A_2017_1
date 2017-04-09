@@ -21,4 +21,21 @@ class WorkersToHtml{
         $html .="</table>\n";
         return $html;
     }
+    public static function stanowiskaToList(array $stanowiska){
+        $html = "<ul>";
+        foreach ($stanowiska as $id => $nazwa) {
+            $html .= "<li><a href='cw18.php?id={$id}'>{$nazwa}</a></li>\n";
+        }
+        $html .= "<li><a href='cw18.php?id=-1'>wszyscy</a></li>\n";
+        $html .= "</ul>\n";
+        return $html;
+    }
+     public static function stanowiskaToSelect(array $stanowiska){
+        $html = "<select name='stanowisko'>";
+        foreach ($stanowiska as $id => $nazwa) {
+            $html .= "<option value='{$id}'>{$nazwa}</option>\n";
+        }        
+        $html .= "</select>\n";
+        return $html;
+    }
 }
