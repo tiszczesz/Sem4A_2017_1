@@ -1,0 +1,28 @@
+div#wrapper{
+    margin: auto;
+    text-align: center;
+    color: #660000;
+}
+div#naglowek{
+    margin: auto;
+    text-align: center;
+    width: 900px;
+    background-color: #ffcc66;
+    color: #660000;
+    font-size: 5em;
+    padding: 20px;
+}
+div#lewy{
+    float: left;
+    width: 30%;
+}
+div#glowny{
+    float: left;
+    width: 68%;
+}
+div#stopka{
+    clear: both;
+    height: 30px;
+    text-align: center;
+    margin: auto;
+}

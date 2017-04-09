@@ -12,11 +12,22 @@ class Repository{
     }
     public function getAllWorkers(){
         $conn = $this->getConnection();
+        if($conn==null){
+            return [];
+        }
         $query = "SELECT  p.id,imie, nazwisko,"
                 . "pensja, nazwa FROM pracownicy as p "
                 . "INNER JOIN stanowiska as s on p.stanowiskoid=s.id "
                 . "order by nazwisko";
         $result = $conn->query($query);
-        var_dump($result);
+        $workers = [];
+        if($result){
+            while(($row = $result->fetch_assoc())!=false){
+                $workers[] = new Pracownik($row['id'], $row['imie'], 
+                        $row['nazwisko'], $row['pensja'], $row['nazwa']);
+            }
+        }
+        $conn->close();
+        return $workers;
     }
 }
