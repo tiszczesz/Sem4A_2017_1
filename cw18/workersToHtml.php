@@ -9,6 +9,7 @@ class WorkersToHtml{
                 . "<th>Nazwisko</th>"
                 . "<th>Pensja</th>"
                 . "<th>Stanowisko</th>"
+                . "<th>Operacje</th>"
                 . "</tr>\n";
         foreach ($workers as $w) {
             $i++;
@@ -16,7 +17,8 @@ class WorkersToHtml{
                     . "<td>{$w->getImie()}</td>"
                     . "<td>{$w->getNazwisko()}</td>"
                     . "<td>{$w->getPensja()}</td>"
-                    . "<td>{$w->getStanowisko()}</td></tr>\n";
+                    . "<td>{$w->getStanowisko()}</td>"
+                    . "<td><a href='usun.php?id={$w->getId()}'>Usuń</a></td></tr>\n";
         }
         $html .="</table>\n";
         return $html;

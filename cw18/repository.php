@@ -57,4 +57,12 @@ class Repository{
         $result = $conn->query($sql);
         return $result;
     }
+    public function DeleteWorker($id=-1){
+        if($id<0) return;
+        $conn = $this->getConnection();
+        if($conn!=null){
+            $sql = "DELETE FROM pracownicy where id={$id}";
+            $result = $conn->query($sql);
+        }
+    }
 }
