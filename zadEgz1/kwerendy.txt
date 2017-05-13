@@ -1,0 +1,4 @@
+"Zapytanie 1: SELECT COUNT(*) FROM `sportowiec` WHERE 1".
+"Zapytanie 2: SELECT imie, nazwisko FROM sportowiec WHERE id=1".
+"Zapytanie 3: SELECT AVG(wynik) FROM `wyniki` WHERE dyscyplina_id=3 AND sportowiec_id=1".
+"Zapytanie 4: SELECT MAX(wynik) FROM `wyniki` WHERE dyscyplina_id=3".

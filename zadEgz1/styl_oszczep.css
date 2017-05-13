@@ -1,0 +1,35 @@
+#baner {
+	background-color: #773D24;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+#glowny{
+	background-color: #B97E65;
+	height: 600px;
+	padding: 20px;
+}
+
+#stopka{
+	background-color: #773D24;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	clear: both;
+}
+#table {
+	width: 80%;
+	padding: 30px;
+       border-spacing:30px;
+         border-collapse: separate;
+}
+
+#table td {
+	background-color: #DEAD98 ;
+	padding: 30px;
+	
+}
+#table td p {
+    text-align: center;
+}
